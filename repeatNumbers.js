@@ -1,32 +1,24 @@
-const repeat1Num = array => {
-  let outputString = '';
-  if (array[1] > 0) {
-    for (let i = 1; i <= array[1]; i++) {
-      outputString += array[0];
-    }
-  }
-  return outputString;
-};
+"use strict";
 
 const repeatNumbers = arrays => {
   let finalString = '';
-  if (arrays.length > 1) {
-    for (let pair of arrays) {
-      finalString += repeat1Num(pair);
-      let nextIndex = arrays.indexOf(pair) + 1;
-      if (pair !== arrays[arrays.length - 1] && arrays[nextIndex][1] !== 0) {
-        finalString += ', ';
-      }
+
+  for (let pair of arrays) {
+    for (let i = 0; i < pair[1]; i++) {
+      finalString += pair[0];
     }
-  } else {
-    let oneArray = arrays[0];
-    finalString += repeat1Num(oneArray);
+    const pairIndex = arrays.indexOf(pair);
+    if (pairIndex !== arrays.length - 1 && arrays[pairIndex + 1][1] !== 0) {
+      finalString += ', ';
+    }
   }
   return finalString;
-};
+}
 
-// console.log(repeatNumbers([[1, 10]]));
-// console.log(repeatNumbers([[1, 2], [2, 3]]));
-// console.log(repeatNumbers([[10, 4], [34, 0], [92, 4]]));
+console.log(repeatNumbers([[1, 10]]));
+console.log(repeatNumbers([[1, 2], [2, 3]]));
+console.log(repeatNumbers([[10, 4], [34, 0], [92, 4]]));
+
+
 
 
