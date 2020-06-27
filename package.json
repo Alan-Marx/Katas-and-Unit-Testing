@@ -1,0 +1,15 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "description": "A collection of katas and accompanying unit tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alan Marx",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  }
+}
