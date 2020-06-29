@@ -20,8 +20,3 @@ const queenThreat = (queen1, queen2) => {
 
 module.exports = { queenThreat };
 
-// console.log(queenThreat([0, 5], [5, 0]));
-// console.log(queenThreat([0, 0], [5, 7]));
-// console.log(queenThreat([0, 0], [0, 7]));
-// console.log(queenThreat([4, 3], [1, 3]));
-// console.log(queenThreat([1, 0], [4, 3]));
