@@ -5,6 +5,10 @@
 
 const queenThreat = (queen1, queen2) => {
   
+  if (!queen2) {
+    throw 'The chessboard positions of both queens must be provided.';
+  }
+
   if (queen1[0] === queen2[0] || queen1[1] === queen2[1]) {
     return true;
   } 

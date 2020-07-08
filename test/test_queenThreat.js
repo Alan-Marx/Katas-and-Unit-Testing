@@ -17,4 +17,8 @@ describe('Queen Threat Function', () => {
   it('should return false if two queens on a chessboard are not in a position to attack each other', () => {
     expect(queenThreat([4, 1], [5, 4])).to.be.false;
   });
+
+  it('should throw an error if one of the queen coordinates is missing', () => {
+    // expect(queenThreat([1, 4])).to.throw();
+  })
 });
